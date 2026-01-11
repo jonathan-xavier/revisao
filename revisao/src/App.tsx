@@ -1,34 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import styled from 'styled-components'
 import './App.css'
+import { Button } from './design-system/components/Button/Button'
+import { Input } from './design-system/components/Input/Input'
+import { useMount } from './util/use-mount'
+import { colors } from './design-system/tokens'
 
-function App() {
-  const [count, setCount] = useState(0)
+const Container = styled.div`
+  background-color: ${colors.gray800};
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  text-align: center;
+  gap: 1rem;
+  border-radius: 6px;
+  color: ${colors.white};
+`
 
+const Main = styled.div`
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  
+`
+
+const App = () => {
+
+  const click = () => {
+    alert("auuuuuuu")
+  }
+
+  useMount(async () => {
+    console.log("carregou a tela")
+  })
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Main>
+
+      <Container>
+        <p>Oi doguinho</p>
+        <Input inputLabel='Insira o seu peso' inputSize='md' placeholder='ex: 90' />
+        <Input inputLabel='Insira sua altura' inputSize='md' placeholder='ex: 1.66' />
+        <Button variant='primay100' title='Calcular' onClick={click} />
+
+      </Container>
+    </Main>
   )
 }
 
