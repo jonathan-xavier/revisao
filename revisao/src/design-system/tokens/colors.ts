@@ -10,10 +10,10 @@ export const colors = {
     gray800: "#202024",
     gray900: "#121214",
 
+    primay100: "#8232b4ff",
+    primay200: "#8e56b1ff",
     primay300: "#00B37E",
     primay500: "#00875F",
     primay700: "#015F43",
     primay900: "#00291D",
-    primay100: "#8232b4ff",
-    primay200: "#8e56b1ff",
 }

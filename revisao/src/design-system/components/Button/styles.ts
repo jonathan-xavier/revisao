@@ -7,6 +7,7 @@ export type IButton =
     | "primay700"
     | "primay900"
     | "primay100";
+ 
 export const StyledButton = styled.button<{
     variant: IButton
 }>`
