@@ -11,13 +11,13 @@ import { Card } from './design-system/components/Card/Card'
 const Container = styled.div`
   background-color: ${colors.gray800};
   width: 500px;
-  height: 500px;
+  height: 550px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding: 1rem 2rem;
   text-align: center;
-  gap: 1rem;
+  gap: 1.5rem;
   border-radius: 6px;
   color: ${colors.white};
 `
